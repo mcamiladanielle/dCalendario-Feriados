@@ -23,7 +23,8 @@
 
 Um calendário inteligente no Power BI permite análises dinâmicas e precisas, alinhando datas, feriados e períodos importantes para sua empresa ou projeto.
 
-Vamos construir uma **tabela calendário robusta**, incluindo feriados fixos e móveis, e aplicar ordenações e relacionamentos para facilitar a análise.
+Vamos construir uma **tabela calendário robusta**, incluindo feriados fixos, e aplicar ordenações e relacionamentos para facilitar a análise.
+e tem como diferencial os feriados móveis
 
 ---
 
