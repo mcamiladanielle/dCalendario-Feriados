@@ -102,21 +102,21 @@ Para feriados móveis como Carnaval e Corpus Christi, crie uma função para cal
 let
     Páscoa = (ano as number) as date =>
     let
-        restoAno19             = Number.Mod(ano, 19),
-        seculo                 = Number.IntegerDivide(ano, 100),
-        restoSeculo            = Number.Mod(ano, 100),
-        quocienteSeculo4       = Number.IntegerDivide(seculo, 4),
-        restoSeculo4           = Number.Mod(seculo, 4),
-        ajuste25               = Number.IntegerDivide(seculo + 8, 25),
-        ajuste3                = Number.IntegerDivide(seculo - ajuste25 + 1, 3),
-        epacta                 = Number.Mod(19 * restoAno19 + seculo - quocienteSeculo4 - ajuste3 + 15, 30),
-        quocienteRestoSeculo4  = Number.IntegerDivide(restoSeculo, 4),
-        restoRestoSeculo4      = Number.Mod(restoSeculo, 4),
-        ajusteSemana           = Number.Mod(32 + 2 * restoSeculo4 + 2 * quocienteRestoSeculo4 - epacta - restoRestoSeculo4, 7),
-        ajusteFinal            = Number.IntegerDivide(restoAno19 + 11 * epacta + 22 * ajusteSemana, 451),
-        mes                    = Number.IntegerDivide(epacta + ajusteSemana - 7 * ajusteFinal + 114, 31),
-        dia                    = ((epacta + ajusteSemana - 7 * ajusteFinal + 114) mod 31) + 1,
-        dataPascoa             = #date(ano, mes, dia)
+        restoAno19 = Number.Mod(ano, 19),
+        seculo = Number.IntegerDivide(ano, 100),
+        restoSeculo = Number.Mod(ano, 100),
+        quocienteSeculo4 = Number.IntegerDivide(seculo, 4),
+        restoSeculo4 = Number.Mod(seculo, 4),
+        ajuste25 = Number.IntegerDivide(seculo + 8, 25),
+        ajuste3 = Number.IntegerDivide(seculo - ajuste25 + 1, 3),
+        epacta = Number.Mod(19 * restoAno19 + seculo - quocienteSeculo4 - ajuste3 + 15, 30),
+        quocienteRestoSeculo4 = Number.IntegerDivide(restoSeculo, 4),
+        restoRestoSeculo4 = Number.Mod(restoSeculo, 4),
+        ajusteSemana = Number.Mod(32 + 2 * restoSeculo4 + 2 * quocienteRestoSeculo4 - epacta - restoRestoSeculo4, 7),
+        ajusteFinal = Number.IntegerDivide(restoAno19 + 11 * epacta + 22 * ajusteSemana, 451),
+        mes = Number.IntegerDivide(epacta + ajusteSemana - 7 * ajusteFinal + 114, 31),
+        dia = Number.Mod(epacta + ajusteSemana - 7 * ajusteFinal + 114, 31) + 1,
+        dataPascoa = #date(ano, mes, dia)
     in
         dataPascoa
 in
